@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rosano Studio - El yapımı özel tasarım butik aksesuarlar. Ürün detayları, fiyatlar ve sipariş.">
+    <meta name="keywords" content="Rosano, el yapımı aksesuarlar, köpek yakalığı, toka, scrunchie, butik aksesuar">
+    <meta name="author" content="Rosano Studio">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4A4036">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="ROSANO STUDIO — Ürün Detayı">
+    <meta property="og:description" content="Rosano Studio - El yapımı özel tasarım butik aksesuarlar.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ROSANO STUDIO — Ürün Detayı">
+    <meta name="twitter:description" content="Rosano Studio - El yapımı özel tasarım butik aksesuarlar.">
+    <meta name="twitter:image" content="images/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <title>ROSANO STUDIO — Ürün Detayı</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="fallback">🌹</span>
+                <img src="images/logo.png" alt="Rosano Logo">
+            </a>
+            <div class="nav-links">
+                <a href="category.html?cat=sizin">Sizin İçin</a>
+                <a href="category.html?cat=dostunuz">Dostunuz İçin</a>
+                <a href="category.html?cat=birlikte">Birlikte</a>
+                <a href="index.html#sizing">Beden Tablosu</a>
+                <a href="index.html#contact">İletişim</a>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;">
+                <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer" class="nav-cta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    Şimdi Al
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menü">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                    <svg id="closeIcon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="category.html?cat=sizin" onclick="closeMobileMenu()">Sizin İçin</a>
+            <a href="category.html?cat=dostunuz" onclick="closeMobileMenu()">Dostunuz İçin</a>
+            <a href="category.html?cat=birlikte" onclick="closeMobileMenu()">Birlikte</a>
+            <a href="index.html#sizing" onclick="closeMobileMenu()">Beden Tablosu</a>
+            <a href="index.html#contact" onclick="closeMobileMenu()">İletişim</a>
+            <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer" class="mobile-cta">Şimdi
+                Al</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-bar">
+        <div class="container">
+            <a href="index.html">Ana Sayfa</a>
+            <span class="sep">›</span>
+            <a href="#" id="breadcrumbCat">Ürünler</a>
+            <span class="sep">›</span>
+            <span id="breadcrumbProduct">Ürün</span>
+        </div>
+    </div>
+
+    <!-- PDP CONTENT -->
+    <section class="pdp">
+        <div class="container">
+            <div class="pdp-grid">
+                <!-- Product Image -->
+                <div class="pdp-gallery">
+                    <div class="pdp-main-image" id="mainImage">
+                        <img src="" alt="" id="pdpImage">
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="pdp-info">
+                    <span class="pdp-category-badge" id="pdpCategoryBadge">Kategori</span>
+                    <h1 class="pdp-title" id="pdpTitle">Ürün Adı</h1>
+
+                    <!-- Badges -->
+                    <div class="pdp-badge-row">
+                        <span class="pdp-limited-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+                            </svg>
+                            Sınırlı Üretim
+                        </span>
+                        <span class="pdp-handmade-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
+                            Handmade by Hande
+                        </span>
+                    </div>
+
+                    <p class="pdp-description" id="pdpDescription">Ürün açıklaması</p>
+
+                    <!-- Price Box -->
+                    <div class="pdp-price-box" id="pdpPriceBox"></div>
+
+                    <!-- Size Picker (for pet products) -->
+                    <div class="pdp-size-section" id="sizeSection" style="display:none;">
+                        <div class="pdp-size-label">
+                            <span>Beden Seçin</span>
+                            <a class="pdp-size-chart-link" id="openSizeChart">📏 Beden Tablosu</a>
+                        </div>
+                        <div class="size-picker" id="sizePicker">
+                            <button class="size-btn" data-size="XS">XS</button>
+                            <button class="size-btn" data-size="S">S</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="L">L</button>
+                            <button class="size-btn" data-size="XL">XL</button>
+                        </div>
+                    </div>
+
+                    <!-- Buy Button -->
+                    <a href="#" target="_blank" rel="noreferrer" class="pdp-buy-btn" id="pdpBuyBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                            <line x1="3" y1="6" x2="21" y2="6" />
+                            <path d="M16 10a4 4 0 0 1-8 0" />
+                        </svg>
+                        Shopier'den Satın Al
+                    </a>
+
+                    <!-- Features -->
+                    <div class="pdp-features">
+                        <div class="pdp-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="6" cy="6" r="3" />
+                                <path d="M8.12 8.12 12 12" />
+                                <path d="M20 4 8.12 15.88" />
+                                <circle cx="6" cy="18" r="3" />
+                                <path d="M14.8 14.8 20 20" />
+                            </svg>
+                            <span>%100 El İşçiliği</span>
+                        </div>
+                        <div class="pdp-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+                            </svg>
+                            <span>Sınırlı Üretim</span>
+                        </div>
+                        <div class="pdp-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                            </svg>
+                            <span>Özenli Dikim & Kalite</span>
+                        </div>
+                    </div>
+
+                    <!-- Complete the Look -->
+                    <div class="complete-look" id="completeLook" style="display:none;">
+                        <div class="complete-look-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                            </svg>
+                            <h3>Kombini Tamamla</h3>
+                        </div>
+                        <div class="complete-look-items" id="completeLookItems"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIZE CHART MODAL -->
+    <div class="size-chart-modal" id="sizeChartModal">
+        <div class="size-chart-modal-content">
+            <div class="size-chart-modal-header">
+                <h3>Pet Aksesuar Beden Tablosu</h3>
+                <button class="size-chart-close" id="closeSizeChart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="size-chart-modal-body">
+                <div class="size-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Beden</th>
+                                <th>Boyun Çevresi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>XS</td>
+                                <td>22 cm'ye kadar</td>
+                            </tr>
+                            <tr>
+                                <td>S</td>
+                                <td>22 – 30 cm</td>
+                            </tr>
+                            <tr>
+                                <td>M</td>
+                                <td>30 – 40 cm</td>
+                            </tr>
+                            <tr>
+                                <td>L</td>
+                                <td>40 – 50 cm</td>
+                            </tr>
+                            <tr>
+                                <td>XL</td>
+                                <td>50 – 60 cm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top:1rem;font-size:0.8125rem;color:rgba(74,64,54,0.6);text-align:center;">
+                    💡 Emin değilseniz boyun çevresini ölçtükten sonra bir üst bedeni seçmenizi öneririz.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">Benzer Ürünler</h2>
+            <div class="products-grid" id="relatedProducts"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="fallback">🌹</span>
+                    <img src="images/logo.png" alt="Rosano Logo">
+                </div>
+                <p class="footer-desc">Siz ve patili dostunuz için özenle dikilmiş, sevgiyle tasarlanmış butik
+                    aksesuarlar.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hızlı Bağlantılar</h4>
+                <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer">Shopier Mağazamız</a>
+                <a href="category.html?cat=sizin">Sizin İçin</a>
+                <a href="category.html?cat=dostunuz">Dostunuz İçin</a>
+                <a href="index.html#sizing">Beden Tablosu</a>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    rosanostudiotr@gmail.com
+                </p>
+                <p><strong>WhatsApp:</strong> 0532 100 87 83</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> ROSANO.STUDIO. Tüm hakları saklıdır.</p>
+            <div class="links">
+                <a href="#">Gizlilik Politikası</a>
+                <a href="#">Kullanım Koşulları</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const productId = parseInt(params.get('id'));
+            const products = getProducts();
+            const product = products.find(p => p.id === productId);
+
+            if (!product) {
+                document.querySelector('.pdp').innerHTML = '<div class="container" style="padding:6rem 1.5rem;text-align:center;"><h2 style="font-family:var(--font-serif);margin-bottom:1rem;">Ürün Bulunamadı</h2><p>Bu ürün mevcut değil veya kaldırılmış olabilir.</p><a href="index.html" style="display:inline-block;margin-top:1.5rem;padding:0.75rem 2rem;background:var(--text-dark);color:#fff;border-radius:var(--radius-full);">Ana Sayfaya Dön</a></div>';
+                document.querySelector('.related-products').style.display = 'none';
+                return;
+            }
+
+            const CAT_LABELS = { sizin: 'Sizin İçin', dostunuz: 'Dostunuz İçin', birlikte: 'Birlikte' };
+            const CAT_CLASSES = { sizin: 'cat-sizin', dostunuz: 'cat-dostunuz', birlikte: 'cat-birlikte' };
+            // Categories that show the size picker (pet-related)
+            const PET_CATS = ['dostunuz', 'birlikte'];
+
+            // --- Page title & dynamic SEO ---
+            document.title = `${product.title} — ROSANO STUDIO`;
+            // Update meta description
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', `${product.title} - ${product.description}`);
+            // Update Open Graph tags
+            const ogTitle = document.querySelector('meta[property="og:title"]');
+            if (ogTitle) ogTitle.setAttribute('content', `${product.title} — ROSANO STUDIO`);
+            const ogDesc = document.querySelector('meta[property="og:description"]');
+            if (ogDesc) ogDesc.setAttribute('content', product.description);
+            const ogImage = document.querySelector('meta[property="og:image"]');
+            if (ogImage) ogImage.setAttribute('content', product.image);
+
+            // --- Breadcrumb ---
+            const breadCat = document.getElementById('breadcrumbCat');
+            const catLabel = CAT_LABELS[product.category] || 'Ürünler';
+            breadCat.textContent = catLabel;
+            breadCat.href = 'category.html?cat=' + product.category;
+            const breadProduct = document.getElementById('breadcrumbProduct');
+            // If product title matches category name, hide the duplicate
+            if (product.title === catLabel) {
+                breadProduct.previousElementSibling.style.display = 'none'; // hide separator
+                breadProduct.style.display = 'none';
+            } else {
+                breadProduct.textContent = product.title;
+            }
+
+            // --- Main image ---
+            document.getElementById('pdpImage').src = product.image;
+            document.getElementById('pdpImage').alt = product.title;
+
+            // --- Category badge ---
+            const badge = document.getElementById('pdpCategoryBadge');
+            badge.textContent = CAT_LABELS[product.category] || product.category;
+            badge.className = 'pdp-category-badge ' + (CAT_CLASSES[product.category] || '');
+
+            // --- Title & description ---
+            document.getElementById('pdpTitle').textContent = product.title;
+            document.getElementById('pdpDescription').textContent = product.description;
+
+            // --- Prices ---
+            const priceBox = document.getElementById('pdpPriceBox');
+            priceBox.innerHTML = product.prices.map(pr =>
+                `<div class="pdp-price-row"><span class="pdp-price-name">${pr.name}</span><span class="pdp-price-value">${pr.price}</span></div>`
+            ).join('');
+
+            // --- Size picker (show for pet categories) ---
+            if (PET_CATS.includes(product.category)) {
+                document.getElementById('sizeSection').style.display = 'block';
+                document.querySelectorAll('.size-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    });
+                });
+            }
+
+            // --- Size chart modal ---
+            const sizeModal = document.getElementById('sizeChartModal');
+            document.getElementById('openSizeChart').addEventListener('click', (e) => {
+                e.preventDefault();
+                sizeModal.classList.add('active');
+            });
+            document.getElementById('closeSizeChart').addEventListener('click', () => {
+                sizeModal.classList.remove('active');
+            });
+            sizeModal.addEventListener('click', (e) => {
+                if (e.target === sizeModal) sizeModal.classList.remove('active');
+            });
+
+            // --- Buy button ---
+            const buyBtn = document.getElementById('pdpBuyBtn');
+            buyBtn.href = product.link || 'https://www.shopier.com/rosanostudio';
+
+            // --- Complete the Look ---
+            // If viewing a "sizin" product → suggest matching pet product
+            // If viewing a "dostunuz" product → suggest matching owner product
+            // If viewing a "birlikte" product → suggest both categories
+            const PAIR_MAP = {
+                sizin: ['dostunuz', 'birlikte'],
+                dostunuz: ['sizin', 'birlikte'],
+                birlikte: ['sizin', 'dostunuz']
+            };
+            const pairCats = PAIR_MAP[product.category] || [];
+            const matchItems = products.filter(p => pairCats.includes(p.category) && p.id !== product.id).slice(0, 3);
+
+            if (matchItems.length) {
+                document.getElementById('completeLook').style.display = 'block';
+                document.getElementById('completeLookItems').innerHTML = matchItems.map(p => `
+            <a href="product.html?id=${p.id}" class="complete-look-card">
+                <img src="${p.image}" alt="${p.title}">
+                <div class="card-info">
+                    <h4>${p.title}</h4>
+                    <span>${CAT_LABELS[p.category] || p.category}</span>
+                </div>
+                <span class="card-price">${p.prices[0]?.price || ''}</span>
+            </a>
+        `).join('');
+            }
+
+            // --- Related products (same category, exclude current) ---
+            const related = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 3);
+            const relGrid = document.getElementById('relatedProducts');
+            if (related.length) {
+                relGrid.innerHTML = related.map(p => `
+            <div class="product-card">
+                <a href="product.html?id=${p.id}" class="image-wrap ${p.bgClass || ''}">
+                    <img src="${p.image}" alt="${p.title}" loading="lazy">
+                    <div class="image-overlay"></div>
+                </a>
+                <h3>${p.title}</h3>
+                <p class="desc">${p.description}</p>
+                <div class="prices">${p.prices.map(pr => `<span>${pr.name} - ${pr.price}</span>`).join('')}</div>
+                <a href="product.html?id=${p.id}" class="view-link">Ürünü İncele</a>
+            </div>
+        `).join('');
+            } else {
+                document.querySelector('.related-products').style.display = 'none';
+            }
+
+            // --- Footer year ---
+            const yearEl = document.getElementById('currentYear');
+            if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+            // --- Mobile menu ---
+            const toggle = document.getElementById('mobileToggle');
+            const menu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            if (toggle && menu) {
+                toggle.addEventListener('click', () => {
+                    const isOpen = menu.classList.toggle('active');
+                    menuIcon.style.display = isOpen ? 'none' : '';
+                    closeIcon.style.display = isOpen ? '' : 'none';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

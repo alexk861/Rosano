@@ -1,0 +1,80 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "sizin",
+      "title": "Bloxie El Yapımı Saç Tokası ve Bluz Seti",
+      "seo_keywords": "el yapımı toka, özel tasarım bluz, saç aksesuarı, butik giyim",
+      "description": "Sizin için özenle dikilen Bloxie tokalar, jumbo scrunchie'ler ve Rosie Belle bluzlar. Şıklığınızı el yapımı detaylarla tamamlayın.",
+      "image": "images/products/bloxie-scrunchie-set.png",
+      "prices": [
+        {
+          "name": "Bloxie Toka",
+          "price": "1.250 TL"
+        },
+        {
+          "name": "Rosie Belle Bluz",
+          "price": "4.000 TL"
+        }
+      ],
+      "link": "https://www.shopier.com/rosanostudio",
+      "bgClass": "bg-rose",
+      "features": ["%100 El İşçiliği", "Sınırlı Sayıda Üretim"]
+    },
+    {
+      "id": 2,
+      "category": "dostunuz",
+      "title": "PawBow El Yapımı Köpek Yakalık ve Aksesuar",
+      "seo_keywords": "köpek yakalığı, köpek aksesuarı, pawbow, çiçekli köpek tasması",
+      "description": "Patili dostunuz için kelebek yakalıklar ve çiçekli PawBow modelleri. Her bir tasarım dostunuzun konforu ve stili için elde dikilmiştir.",
+      "image": "images/products/dog-collar-red.png",
+      "prices": [
+        {
+          "name": "PawBow Star",
+          "price": "1.700 TL"
+        },
+        {
+          "name": "Çiçek Yakalık",
+          "price": "1.700 TL"
+        }
+      ],
+      "link": "https://www.shopier.com/rosanostudio",
+      "bgClass": "bg-green",
+      "size_guide": "XS (22cm) - XL (60cm)"
+    },
+    {
+      "id": 3,
+      "category": "birlikte",
+      "title": "Rosie Belle Sahibi ile Uyumlu Köpek Aksesuar Takımı",
+      "seo_keywords": "köpek sahibi kombin, eşleşen aksesuarlar, anne köpek kombini",
+      "description": "Mükemmel uyum! Sahibine uygun toka ve köpeğine uygun yakalık içeren ikili setlerle aranızdaki bağı stilinize yansıtın.",
+      "image": "images/products/scrunchie-plaid-lace.png",
+      "prices": [
+        {
+          "name": "Rosie Belle İkili Takım",
+          "price": "4.500 TL"
+        },
+        {
+          "name": "Kelebek Bebe Yaka Takımı",
+          "price": "3.000 TL"
+        }
+      ],
+      "link": "https://www.shopier.com/rosanostudio",
+      "bgClass": "bg-gold"
+    }
+  ],
+  "brand_content": {
+    "heroBadge": "Özel Tasarım El Yapımı Aksesuarlar",
+    "heroTitle": "Mutluluk <br>Küçük Detaylarda Saklıdır",
+    "heroSubtitle": "Sizin ve patili dostunuzun uyumlu bir stile sahip olması için özenle tasarlanmış, tamamen el işçiliği butik aksesuarlar.",
+    "story": {
+      "title": "Tebessümün Hikayesi (Rosano)",
+      "paragraphs": [
+        "Rosano, Hande'nin (anlamı: Tebessüm) modaya olan ilgisini patili dostları için duyduğu sevgiyle birleştirdiği bir hikayedir.",
+        "Komorosano soyadından ve güllerin zarafetinden (Rose) ilham alan marka, her dikişte sevgi ve mutluluğu hedefler.",
+        "Küçük detayların büyük farklar yarattığına inanarak, dostlarınızla olan bağınızı güçlendiriyoruz."
+      ]
+    }
+  },
+  "exportDate": "2026-02-28T13:00:55.883Z"
+}

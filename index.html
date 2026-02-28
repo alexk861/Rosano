@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rosano Studio - Siz ve patili dostunuz için özenle dikilmiş, sevgiyle tasarlanmış butik aksesuarlar. El yapımı tokalar, scrunchie'ler ve köpek yakalıkları.">
+    <meta name="keywords"
+        content="Rosano, el yapımı aksesuarlar, köpek yakalığı, toka, scrunchie, butik aksesuar, pet aksesuar, evcil hayvan aksesuarı">
+    <meta name="author" content="Rosano Studio">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4A4036">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ROSANO STUDIO — Özel Tasarım El Yapımı Aksesuarlar">
+    <meta property="og:description"
+        content="Siz ve patili dostunuz için özenle dikilmiş, sevgiyle tasarlanmış butik aksesuarlar.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ROSANO STUDIO — Özel Tasarım El Yapımı Aksesuarlar">
+    <meta name="twitter:description"
+        content="Siz ve patili dostunuz için özenle dikilmiş, sevgiyle tasarlanmış butik aksesuarlar.">
+    <meta name="twitter:image" content="images/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+
+    <title>ROSANO STUDIO — Özel Tasarım El Yapımı Aksesuarlar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="fallback">🌹</span>
+                <img src="images/logo.png" alt="Rosano Logo">
+            </a>
+
+            <div class="nav-links">
+                <a href="category.html?cat=sizin">Sizin İçin</a>
+                <a href="category.html?cat=dostunuz">Dostunuz İçin</a>
+                <a href="category.html?cat=birlikte">Birlikte</a>
+                <a href="index.html#sizing">Beden Tablosu</a>
+                <a href="index.html#contact">İletişim</a>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:1rem;">
+                <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer" class="nav-cta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                    Şimdi Al
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Menü">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                    <svg id="closeIcon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="category.html?cat=sizin" onclick="closeMobileMenu()">Sizin İçin</a>
+            <a href="category.html?cat=dostunuz" onclick="closeMobileMenu()">Dostunuz İçin</a>
+            <a href="category.html?cat=birlikte" onclick="closeMobileMenu()">Birlikte</a>
+            <a href="index.html#sizing" onclick="closeMobileMenu()">Beden Tablosu</a>
+            <a href="index.html#contact" onclick="closeMobileMenu()">İletişim</a>
+            <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer" class="mobile-cta">Şimdi
+                Al</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/products/lifestyle-bloxie-red.png" alt="Rosano Studio el yapımı çiçek desenli Bloxie toka">
+            <div class="hero-overlay-1"></div>
+            <div class="hero-overlay-2"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge" id="heroBadge">Özel Tasarım El Yapımı Aksesuarlar</span>
+            <h1 id="heroTitle">Mutluluk <br>Küçük Detaylarda Saklıdır</h1>
+            <p id="heroSubtitle">Sizin ve patili dostunuzun uyumlu bir stile sahip olması için özenle tasarlanmış,
+                tamamen el işçiliği butik aksesuarlar.</p>
+            <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem;">
+                <a href="category.html" class="hero-cta">
+                    Koleksiyonu Keşfet
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE CALLOUTS -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid" id="featuresGrid">
+                <div class="feature-item">
+                    <div class="feature-icon rose">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="6" cy="6" r="3" />
+                            <path d="M8.12 8.12 12 12" />
+                            <path d="M20 4 8.12 15.88" />
+                            <circle cx="6" cy="18" r="3" />
+                            <path d="M14.8 14.8 20 20" />
+                        </svg>
+                    </div>
+                    <h3 id="feature1Title">%100 El Emeği</h3>
+                    <p id="feature1Desc">Her bir parça stüdyomuzda sevgiyle ve özenle dikilmektedir.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon green">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z" />
+                        </svg>
+                    </div>
+                    <h3 id="feature2Title">Sınırlı Üretim</h3>
+                    <p id="feature2Desc">Herkeste olmayan tasarımlarla farklı olma imkanı.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon gold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        </svg>
+                    </div>
+                    <h3 id="feature3Title">Özenli Dikim & Kalite</h3>
+                    <p id="feature3Desc">Duygusal bağ kurarak stilinizi tamamlayan yüksek kalite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCT SHOWCASE -->
+    <section id="collections" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Öne Çıkan Koleksiyonlar</h2>
+                <p>Sıradan bir kombini küçük detaylarla değiştiren sevgi dolu tasarımlarımızı keşfedin.</p>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products loaded dynamically by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- REELS / HOW TO USE -->
+    <section class="reels">
+        <div class="container">
+            <div class="reels-header">
+                <div class="text">
+                    <h2>Nasıl Kullanılır?</h2>
+                    <p>Aksesuarlarımızın çok yönlü dünyasını keşfedin. Çanta süsünün scrunchie'ye dönüşümü ve patili
+                        dostunuzla uyumlu kombin fikirleri.</p>
+                </div>
+                <a href="#" class="ig-link">
+                    Instagram'da İzle
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg>
+                </a>
+            </div>
+            <div class="reels-grid">
+                <div class="reel-card">
+                    <img src="images/products/lifestyle-scrunchie-plaid.png" alt="">
+                    <div class="overlay">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="10 8 16 12 10 16 10 8" />
+                        </svg>
+                    </div>
+                    <div class="label">Çanta süsünden Scrunchie'ye 🎀</div>
+                </div>
+                <div class="reel-card">
+                    <img src="images/products/lifestyle-scrunchie-duo.png" alt="">
+                    <div class="overlay">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="10 8 16 12 10 16 10 8" />
+                        </svg>
+                    </div>
+                    <div class="label">Dostunuzla Uyumlu Kombinler 🐾</div>
+                </div>
+                <div class="reel-card desktop-only">
+                    <img src="images/products/lifestyle-bloxie-lace.png" alt="">
+                    <div class="overlay">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="10 8 16 12 10 16 10 8" />
+                        </svg>
+                    </div>
+                    <div class="label">Günlük Stilde Bloxie ✨</div>
+                </div>
+                <div class="reel-card desktop-only">
+                    <img src="images/products/lifestyle-scrunchie-plaid-bun.png" alt="">
+                    <div class="overlay">
+                        <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="10 8 16 12 10 16 10 8" />
+                        </svg>
+                    </div>
+                    <div class="label">Üretim Aşamalarımız 🪡</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section id="how-to-use" class="how-to-use">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="howToUseTitle">Nasıl Kullanılır?</h2>
+            </div>
+            <div class="how-to-content">
+                <div class="how-to-text">
+                    <p id="howToUseDesc">Aksesuarlarımızın çok yönlü dünyasını keşfedin. Çanta süsünün scrunchie'ye
+                        dönüşümü ve patili dostunuzla uyumlu kombin fikirleri.</p>
+                </div>
+                <div class="how-to-video">
+                    <div class="video-container">
+                        <video id="howToUseVideo" controls muted loop playsinline
+                            poster="images/products/lifestyle-bloxie-red.png">
+                            Tarayıcınız video etiketini desteklemiyor.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section id="story" class="story">
+        <div class="container">
+            <div class="story-inner">
+                <div class="story-image">
+                    <div class="arch">
+                        <img src="images/products/lifestyle-bloxie-red.png" alt="Hande Komorosano">
+                    </div>
+                    <div class="badge">
+                        <span class="fallback">🌹</span>
+                        <img src="images/logo.png" alt="Rosano Logo">
+                    </div>
+                </div>
+                <div class="story-text">
+                    <h2 id="storyTitle">Tebessümün Hikayesi</h2>
+                    <div class="paragraphs" id="storyParagraphs">
+                        <p>Rosano, modaya ve saç aksesuarlarına olan ilgimin, patili dostum için aldığım aksesuarlarla
+                            birleşmesi sonucu benzersiz ve uyumlu tasarımlar oluşturma fikriyle doğdu.</p>
+                        <p>Markanın ismi benim için çok özel bir anlam taşıyor. Adım olan <strong>"Hande"</strong>nin
+                            anlamı olan "Tebessüm, gülümsemek" ile soyadım <strong>Komorosano</strong>'yu kısalttım.
+                            Bunu da İngilizcede gül anlamına gelen "rose" ile bağdaştırarak <strong>ROSANO</strong>
+                            markasını hayata geçirdim.</p>
+                        <p>Her bir tasarım, stüdyomda benim tarafımdan el işçiliğiyle üretilmektedir. Misyonumuz;
+                            sıradan bir kombini küçük detaylarla değiştirerek büyük farklar yaratabileceğini göstermek
+                            ve patili dostlarınızla aranızdaki o güzel duygusal bağı stilinize yansıtmaktır.</p>
+                    </div>
+                    <div class="signature">
+                        <p class="name">Hande Komorosano</p>
+                        <p class="role">Kurucu & Tasarımcı</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIZING GUIDE -->
+    <section id="sizing" class="sizing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Beden Tablosu</h2>
+                <p class="hint">Lütfen evcil hayvanınızın boyun çevresini yumuşak bir ölçüm bandı kullanarak ölçün.</p>
+            </div>
+            <div class="size-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SIZE</th>
+                            <th>BOYUN ÇEVRESİ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>XS</td>
+                            <td>22cm'e kadar</td>
+                        </tr>
+                        <tr>
+                            <td>S</td>
+                            <td>30cm'e kadar</td>
+                        </tr>
+                        <tr>
+                            <td>M</td>
+                            <td>40cm'e kadar</td>
+                        </tr>
+                        <tr>
+                            <td>L</td>
+                            <td>50cm'e kadar</td>
+                        </tr>
+                        <tr>
+                            <td>XL</td>
+                            <td>60cm'e kadar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & SOCIAL -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="social-proof">
+                    <div class="header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                        <h2>Sizden Gelenler</h2>
+                    </div>
+                    <p>Müşterilerimizin Rosano ürünleriyle olan deneyimlerini görmeye bayılıyoruz! Sayfamızda yer almak
+                        için bizi etiketlemeyi unutmayın. <br><a href="#">@rosano.studio</a></p>
+                    <div class="social-grid">
+                        <div class="social-item">
+                            <img src="images/products/lifestyle-scrunchie-duo.png" alt="">
+                            <div class="heart-overlay">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="social-item">
+                            <img src="images/products/lifestyle-bloxie-lace.png" alt="">
+                            <div class="heart-overlay">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap">
+                    <h2>İletişime Geçin</h2>
+                    <p>Özel siparişler, işbirlikleri veya sadece merhaba demek için bize yazabilirsiniz.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>İsim Soyisim</label>
+                            <input type="text" placeholder="Adınız" required>
+                        </div>
+                        <div class="form-group">
+                            <label>E-Posta</label>
+                            <input type="email" placeholder="ornek@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Konu</label>
+                            <select>
+                                <option>Genel Sorular</option>
+                                <option>Özel İkili Set Siparişi</option>
+                                <option>İşbirliği Talebi</option>
+                                <option>Sipariş Destek</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Mesajınız</label>
+                            <textarea rows="4" placeholder="Size nasıl yardımcı olabiliriz?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                            Mesajı Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="fallback">🌹</span>
+                    <img src="images/logo.png" alt="Rosano Logo">
+                </div>
+                <p class="footer-desc">Siz ve patili dostunuz için özenle dikilmiş, sevgiyle tasarlanmış butik
+                    aksesuarlar.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hızlı Bağlantılar</h4>
+                <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer">Shopier Mağazamız</a>
+                <a href="#">Etsy Store</a>
+                <a href="#">Amazon Handmade (Yakında)</a>
+                <a href="#sizing">Beden Tablosu</a>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    rosanostudiotr@gmail.com
+                </p>
+                <p><strong>WhatsApp:</strong> 0532 100 87 83</p>
+                <div class="footer-social">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> ROSANO.STUDIO. Tüm hakları saklıdır.</p>
+            <div class="links">
+                <a href="#">Gizlilik Politikası</a>
+                <a href="#">Kullanım Koşulları</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

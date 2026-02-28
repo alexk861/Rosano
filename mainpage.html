@@ -1,0 +1,529 @@
+import React, { useState } from 'react';
+import {
+Heart,
+Sparkles,
+Scissors,
+ShoppingBag,
+Instagram,
+ArrowRight,
+Menu,
+X,
+Mail,
+PlayCircle
+} from 'lucide-react';
+
+export default function App() {
+const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+return (
+<div className="min-h-screen bg-[#FAF8F5] text-[#4A4036] font-sans selection:bg-[#F4EBE8] selection:text-[#4A4036]">
+
+    {/* --- NAVIGATION (Header) --- */}
+    <nav className="absolute w-full z-50 top-0 left-0 bg-transparent py-4 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+            {/* Logo */}
+            <div className="flex items-center cursor-pointer">
+                <div
+                    className="w-14 h-14 rounded-full border border-[#4A4036]/20 shadow-sm overflow-hidden bg-[#FAF8F5] flex items-center justify-center relative">
+                    <span className="font-serif text-xl absolute text-[#4A4036]">🌹</span>
+                    <img src="logo.jpg" alt="Rosano Logo" className="w-full h-full object-cover relative z-10 bg-white"
+                        onError={(e)=> e.target.style.display = 'none'} />
+                </div>
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="#collections" className="hover:text-rose-900 transition-colors">Ürünler</a>
+                <a href="#story" className="hover:text-rose-900 transition-colors">Hikayemiz</a>
+                <a href="#sizing" className="hover:text-rose-900 transition-colors">Beden Tablosu</a>
+                <a href="#contact" className="hover:text-rose-900 transition-colors">İletişim</a>
+            </div>
+
+            {/* CTA & Mobile Toggle */}
+            <div className="flex items-center gap-4">
+                <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                    className="hidden md:flex items-center gap-2 bg-[#4A4036] text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#342d26] transition-colors">
+                    <ShoppingBag size={16} />
+                    Şimdi Al
+                </a>
+                <button className="md:hidden text-[#4A4036]" onClick={()=> setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                    {isMobileMenuOpen ?
+                    <X size={24} /> :
+                    <Menu size={24} />}
+                </button>
+            </div>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+        <div
+            className="absolute top-full left-0 w-full bg-[#FAF8F5] shadow-lg py-6 px-6 flex flex-col gap-4 border-t border-[#EFE8D8] md:hidden">
+            <a href="#collections" className="text-lg font-serif hover:text-rose-900" onClick={()=>
+                setIsMobileMenuOpen(false)}>Ürünler</a>
+            <a href="#story" className="text-lg font-serif hover:text-rose-900" onClick={()=>
+                setIsMobileMenuOpen(false)}>Hikayemiz</a>
+            <a href="#sizing" className="text-lg font-serif hover:text-rose-900" onClick={()=>
+                setIsMobileMenuOpen(false)}>Beden Tablosu</a>
+            <a href="#contact" className="text-lg font-serif hover:text-rose-900" onClick={()=>
+                setIsMobileMenuOpen(false)}>İletişim</a>
+            <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                className="flex items-center justify-center gap-2 bg-[#4A4036] text-white px-5 py-3 rounded-full text-sm font-medium mt-4">
+                Şimdi Al
+            </a>
+        </div>
+        )}
+    </nav>
+
+    {/* --- HERO SECTION --- */}
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        {/* Background Image with Pastel Overlay */}
+        <div className="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2000&auto=format&fit=crop"
+                alt="" className="w-full h-full object-cover object-top" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F4EBE8]/90 to-[#EFE8D8]/70 mix-blend-multiply">
+            </div>
+            <div className="absolute inset-0 bg-black/10"></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
+            <span
+                className="inline-block py-1 px-3 rounded-full bg-white/30 backdrop-blur-sm border border-white/40 text-sm tracking-widest uppercase mb-6 font-medium text-[#4A4036]">
+                Özel Tasarım El Yapımı Aksesuarlar
+            </span>
+            <h1 className="text-5xl md:text-7xl font-serif text-[#342d26] leading-tight mb-6">
+                Mutluluk <br className="hidden md:block" /> Küçük Detaylarda Saklıdır
+            </h1>
+            <p className="text-lg md:text-xl text-[#4A4036] mb-10 max-w-2xl mx-auto font-light">
+                Sizin ve patili dostunuzun uyumlu bir stile sahip olması için özenle tasarlanmış, tamamen el işçiliği
+                butik aksesuarlar.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                    className="w-full sm:w-auto px-8 py-4 bg-[#4A4036] text-white rounded-full font-medium tracking-wide hover:bg-[#342d26] transition-all transform hover:-translate-y-0.5 shadow-lg flex items-center justify-center gap-2">
+                    Koleksiyonu Keşfet
+                    <ArrowRight size={18} />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {/* --- FEATURE CALLOUTS --- */}
+    <section className="bg-[#FAF8F5] py-12 border-b border-[#EFE8D8]">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-[#F4EBE8] flex items-center justify-center text-rose-900">
+                    <Scissors size={24} strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-lg">%100 El Emeği</h3>
+                <p className="text-sm text-[#4A4036]/70">Her bir parça stüdyomuzda sevgiyle ve özenle dikilmektedir.</p>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-[#E3E8E4] flex items-center justify-center text-emerald-900">
+                    <Sparkles size={24} strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-lg">Sınırlı Üretim</h3>
+                <p className="text-sm text-[#4A4036]/70">Herkeste olmayan tasarımlarla farklı olma imkanı.</p>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-[#EFE8D8] flex items-center justify-center text-amber-900">
+                    <Heart size={24} strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-lg">Özenli Dikim & Kalite</h3>
+                <p className="text-sm text-[#4A4036]/70">Duygusal bağ kurarak stilinizi tamamlayan yüksek kalite.</p>
+            </div>
+        </div>
+    </section>
+
+    {/* --- PRODUCT SHOWCASE (Grid Layout) --- */}
+    <section id="collections" className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+                <h2 className="text-4xl font-serif mb-4 text-[#342d26]">Öne Çıkan Koleksiyonlar</h2>
+                <p className="text-[#4A4036]/80 max-w-xl mx-auto">Sıradan bir kombini küçük detaylarla değiştiren sevgi
+                    dolu tasarımlarımızı keşfedin.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                {/* Sizin İçin (Women) */}
+                <div className="group">
+                    <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                        className="block relative overflow-hidden rounded-2xl aspect-[4/5] mb-6 bg-[#F4EBE8]">
+                        <img src="https://images.unsplash.com/photo-1605417385412-2592534f3ff5?q=80&w=800&auto=format&fit=crop"
+                            alt=""
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                        <div
+                            className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500">
+                        </div>
+                    </a>
+                    <h3 className="text-2xl font-serif mb-2 text-[#342d26]">Sizin İçin</h3>
+                    <p className="text-[#4A4036]/80 mb-3 font-light text-sm">Bloxie tokalar, jumbo scrunchie’ler ve
+                        Rosie Belle bluzlar.</p>
+                    <div className="flex flex-col gap-1 mb-4">
+                        <span className="font-medium text-[#4A4036]">Bloxie Toka - 1.250 TL</span>
+                        <span className="font-medium text-[#4A4036]">Rosie Belle Bluz - 4.000 TL</span>
+                    </div>
+                    <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                        className="inline-block text-sm tracking-wider uppercase font-medium border-b border-[#4A4036] pb-1 hover:text-rose-900 transition-colors">Tümünü
+                        İncele</a>
+                </div>
+
+                {/* Dostunuz İçin (Dog) */}
+                <div className="group">
+                    <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                        className="block relative overflow-hidden rounded-2xl aspect-[4/5] mb-6 bg-[#E3E8E4]">
+                        <img src="https://images.unsplash.com/photo-1537151608804-ea6f1103f699?q=80&w=800&auto=format&fit=crop"
+                            alt=""
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                    </a>
+                    <h3 className="text-2xl font-serif mb-2 text-[#342d26]">Dostunuz İçin</h3>
+                    <p className="text-[#4A4036]/80 mb-3 font-light text-sm">Kelebek yakalıklar, çiçekli modeller ve
+                        PawBow serisi.</p>
+                    <div className="flex flex-col gap-1 mb-4">
+                        <span className="font-medium text-[#4A4036]">PawBow Star - 1.700 TL</span>
+                        <span className="font-medium text-[#4A4036]">Çiçek Yakalık - 1.700 TL</span>
+                    </div>
+                    <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                        className="inline-block text-sm tracking-wider uppercase font-medium border-b border-[#4A4036] pb-1 hover:text-emerald-900 transition-colors">Tümünü
+                        İncele</a>
+                </div>
+
+                {/* Birlikte (Women + Dog) */}
+                <div className="group">
+                    <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                        className="block relative overflow-hidden rounded-2xl aspect-[4/5] mb-6 bg-[#EFE8D8]">
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?q=80&w=800&auto=format&fit=crop"
+                            alt=""
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" />
+                    </a>
+                    <h3 className="text-2xl font-serif mb-2 text-[#342d26]">Birlikte (Mükemmel Uyum)</h3>
+                    <p className="text-[#4A4036]/80 mb-3 font-light text-sm">Sahibine uygun toka ve köpeğine uygun
+                        yakalık içeren ikili setler.</p>
+                    <div className="flex flex-col gap-1 mb-4">
+                        <span className="font-medium text-[#4A4036]">Rosie Belle İkili Takım - 4.500 TL</span>
+                        <span className="font-medium text-[#4A4036]">Kelebek Bebe Yaka Takımı - 3.000 TL</span>
+                    </div>
+                    <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                        className="inline-block text-sm tracking-wider uppercase font-medium border-b border-[#4A4036] pb-1 hover:text-amber-900 transition-colors">Tümünü
+                        İncele</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* --- HOW TO USE / REELS (Interactive Video Section) --- */}
+    <section className="py-24 px-6 md:px-12 bg-[#F4EBE8]/50">
+        <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div className="max-w-xl">
+                    <h2 className="text-4xl font-serif mb-4 text-[#342d26]">Nasıl Kullanılır?</h2>
+                    <p className="text-[#4A4036]/80">Aksesuarlarımızın çok yönlü dünyasını keşfedin. Çanta süsünün
+                        scrunchie'ye dönüşümü ve patili dostunuzla uyumlu kombin fikirleri.</p>
+                </div>
+                <a href="#"
+                    className="hidden md:flex items-center gap-2 font-medium hover:text-rose-900 transition-colors mt-4 md:mt-0">
+                    Instagram'da İzle
+                    <ArrowRight size={16} />
+                </a>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                {/* Reel 1 */}
+                <div
+                    className="relative aspect-[9/16] bg-gray-200 rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1596773531401-447098e6e5cb?q=80&w=400&auto=format&fit=crop"
+                        alt=""
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <PlayCircle
+                            className="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white text-sm font-medium drop-shadow-md">
+                        Çanta süsünden Scrunchie'ye 🎀
+                    </div>
+                </div>
+                {/* Reel 2 */}
+                <div
+                    className="relative aspect-[9/16] bg-gray-200 rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all">
+                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=400&auto=format&fit=crop"
+                        alt=""
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <PlayCircle
+                            className="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white text-sm font-medium drop-shadow-md">
+                        Dostunuzla Uyumlu Kombinler 🐾
+                    </div>
+                </div>
+                {/* Reel 3 */}
+                <div
+                    className="relative aspect-[9/16] bg-gray-200 rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1621340156942-1e96a4ab20ec?q=80&w=400&auto=format&fit=crop"
+                        alt=""
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <PlayCircle
+                            className="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white text-sm font-medium drop-shadow-md">
+                        Günlük Stilde Bloxie ✨
+                    </div>
+                </div>
+                {/* Reel 4 */}
+                <div
+                    className="relative aspect-[9/16] bg-gray-200 rounded-2xl overflow-hidden group cursor-pointer shadow-sm hover:shadow-lg transition-all hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1605371924599-2d0365da26f5?q=80&w=400&auto=format&fit=crop"
+                        alt=""
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <PlayCircle
+                            className="text-white w-12 h-12 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all" />
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white text-sm font-medium drop-shadow-md">
+                        Üretim Aşamalarımız 🪡
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* --- OUR STORY --- */}
+    <section id="story" className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+            <div className="w-full md:w-1/2 relative">
+                <div
+                    className="aspect-[4/5] rounded-tl-full rounded-tr-full overflow-hidden shadow-xl border-4 border-[#F4EBE8]">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop"
+                        alt="" className="w-full h-full object-cover" />
+                </div>
+                {/* Logo Badge Overlay */}
+                <div
+                    className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full shadow-lg border-4 border-white overflow-hidden bg-[#FAF8F5] flex items-center justify-center relative">
+                    <span className="font-serif text-4xl absolute text-[#4A4036]">🌹</span>
+                    <img src="logo.jpg" alt="Rosano Logo" className="w-full h-full object-cover relative z-10 bg-white"
+                        onError={(e)=> e.target.style.display = 'none'} />
+                </div>
+            </div>
+
+            <div className="w-full md:w-1/2">
+                <h2 className="text-4xl font-serif mb-6 text-[#342d26]">Tebessümün Hikayesi</h2>
+                <div className="space-y-6 text-[#4A4036]/80 font-light leading-relaxed">
+                    <p>
+                        Rosano, modaya ve saç aksesuarlarına olan ilgimin, patili dostum için aldığım aksesuarlarla
+                        birleşmesi sonucu benzersiz ve uyumlu tasarımlar oluşturma fikriyle doğdu.
+                    </p>
+                    <p>
+                        Markanın ismi benim için çok özel bir anlam taşıyor. Adım olan <strong>"Hande"</strong>nin
+                        anlamı olan "Tebessüm, gülümsemek" ile soyadım <strong>Komorosano</strong>'yu kısalttım. Bunu da
+                        İngilizcede gül anlamına gelen "rose" ile bağdaştırarak <strong>ROSANO</strong> markasını hayata
+                        geçirdim.
+                    </p>
+                    <p>
+                        Her bir tasarım, stüdyomda benim tarafımdan el işçiliğiyle üretilmektedir. Misyonumuz; sıradan
+                        bir kombini küçük detaylarla değiştirerek büyük farklar yaratabileceğini göstermek ve patili
+                        dostlarınızla aranızdaki o güzel duygusal bağı stilinize yansıtmaktır.
+                    </p>
+                </div>
+
+                <div className="mt-10 flex flex-col">
+                    <p className="font-serif text-xl text-[#342d26]">Hande Komorosano</p>
+                    <p className="text-sm text-[#4A4036]/60 mt-1">Kurucu & Tasarımcı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/* --- SIZING GUIDE --- */}
+    <section id="sizing" className="py-24 px-6 md:px-12 bg-[#FAF8F5]">
+        <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+                <h2 className="text-4xl font-serif mb-4 text-[#342d26]">Beden Tablosu</h2>
+                <p
+                    className="text-[#4A4036]/80 bg-[#EFE8D8]/50 inline-block px-6 py-3 rounded-full mt-4 border border-[#EFE8D8] text-sm md:text-base">
+                    Lütfen evcil hayvanınızın boyun çevresini yumuşak bir ölçüm bandı kullanarak ölçün.
+                </p>
+            </div>
+
+            <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-[#EFE8D8]">
+                <table className="w-full text-center">
+                    <thead>
+                        <tr className="bg-[#D9CDBF] text-[#342d26]">
+                            <th className="py-5 px-6 font-serif text-lg font-medium w-1/2 border-r border-white/20">SIZE
+                            </th>
+                            <th className="py-5 px-6 font-serif text-lg font-medium w-1/2">BOYUN ÇEVRESİ</th>
+                        </tr>
+                    </thead>
+                    <tbody className="divide-y divide-[#EFE8D8]">
+                        <tr className="hover:bg-[#FAF8F5] transition-colors">
+                            <td className="py-4 px-6 font-medium">XS</td>
+                            <td className="py-4 px-6 text-[#4A4036]/80">22cm'e kadar</td>
+                        </tr>
+                        <tr className="hover:bg-[#FAF8F5] transition-colors bg-[#F4EBE8]/20">
+                            <td className="py-4 px-6 font-medium">S</td>
+                            <td className="py-4 px-6 text-[#4A4036]/80">30cm'e kadar</td>
+                        </tr>
+                        <tr className="hover:bg-[#FAF8F5] transition-colors">
+                            <td className="py-4 px-6 font-medium">M</td>
+                            <td className="py-4 px-6 text-[#4A4036]/80">40cm'e kadar</td>
+                        </tr>
+                        <tr className="hover:bg-[#FAF8F5] transition-colors bg-[#F4EBE8]/20">
+                            <td className="py-4 px-6 font-medium">L</td>
+                            <td className="py-4 px-6 text-[#4A4036]/80">50cm'e kadar</td>
+                        </tr>
+                        <tr className="hover:bg-[#FAF8F5] transition-colors">
+                            <td className="py-4 px-6 font-medium">XL</td>
+                            <td className="py-4 px-6 text-[#4A4036]/80">60cm'e kadar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    {/* --- INSTAGRAM & CONTACT --- */}
+    <section id="contact" className="py-24 px-6 md:px-12 bg-white border-t border-[#EFE8D8]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+
+            {/* Sizden Gelenler (Social Proof) */}
+            <div>
+                <div className="flex items-center gap-3 mb-8">
+                    <Instagram className="text-rose-900" />
+                    <h2 className="text-3xl font-serif text-[#342d26]">Sizden Gelenler</h2>
+                </div>
+                <p className="text-[#4A4036]/80 mb-8 font-light">
+                    Müşterilerimizin Rosano ürünleriyle olan deneyimlerini görmeye bayılıyoruz! Sayfamızda yer almak
+                    için bizi etiketlemeyi unutmayın. <br />
+                    <a href="#" className="font-medium hover:text-rose-900 transition-colors">@rosano.studio</a>
+                </p>
+
+                <div className="grid grid-cols-2 gap-4">
+                    <div className="aspect-square rounded-xl overflow-hidden group cursor-pointer relative">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=500&auto=format&fit=crop"
+                            alt=""
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div
+                            className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <Heart className="text-white fill-white" />
+                        </div>
+                    </div>
+                    <div className="aspect-square rounded-xl overflow-hidden group cursor-pointer relative">
+                        <img src="https://images.unsplash.com/photo-1621340156942-1e96a4ab20ec?q=80&w=500&auto=format&fit=crop"
+                            alt=""
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        <div
+                            className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <Heart className="text-white fill-white" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-[#FAF8F5] p-8 md:p-10 rounded-3xl shadow-sm border border-[#EFE8D8]">
+                <h2 className="text-3xl font-serif mb-2 text-[#342d26]">İletişime Geçin</h2>
+                <p className="text-[#4A4036]/70 mb-8 font-light">Özel siparişler, işbirlikleri veya sadece merhaba demek
+                    için bize yazabilirsiniz.</p>
+
+                <form onSubmit={(e)=> e.preventDefault()} className="space-y-5">
+                    <div>
+                        <label className="block text-sm font-medium mb-2 text-[#4A4036]">İsim Soyisim</label>
+                        <input type="text"
+                            className="w-full px-4 py-3 bg-white border border-[#EFE8D8] rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-900/20 focus:border-rose-900/40 transition-all"
+                            placeholder="Adınız" />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium mb-2 text-[#4A4036]">E-Posta</label>
+                        <input type="email"
+                            className="w-full px-4 py-3 bg-white border border-[#EFE8D8] rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-900/20 focus:border-rose-900/40 transition-all"
+                            placeholder="ornek@email.com" />
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium mb-2 text-[#4A4036]">Konu</label>
+                        <select
+                            className="w-full px-4 py-3 bg-white border border-[#EFE8D8] rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-900/20 focus:border-rose-900/40 transition-all appearance-none">
+                            <option>Genel Sorular</option>
+                            <option>Özel İkili Set Siparişi</option>
+                            <option>İşbirliği Talebi</option>
+                            <option>Sipariş Destek</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium mb-2 text-[#4A4036]">Mesajınız</label>
+                        <textarea rows="4"
+                            className="w-full px-4 py-3 bg-white border border-[#EFE8D8] rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-900/20 focus:border-rose-900/40 transition-all resize-none"
+                            placeholder="Size nasıl yardımcı olabiliriz?"></textarea>
+                    </div>
+                    <button
+                        className="w-full py-4 bg-[#4A4036] text-white rounded-xl font-medium tracking-wide hover:bg-[#342d26] transition-colors flex items-center justify-center gap-2 mt-4">
+                        <Mail size={18} />
+                        Mesajı Gönder
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    {/* --- FOOTER --- */}
+    <footer className="bg-[#342d26] text-[#EFE8D8] py-16 px-6 md:px-12">
+        <div
+            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-[#EFE8D8]/20 pb-12 mb-8">
+
+            <div className="flex flex-col gap-4">
+                <div className="flex items-center mb-2">
+                    <div
+                        className="w-20 h-20 rounded-full overflow-hidden bg-[#FAF8F5] flex items-center justify-center relative">
+                        <span className="font-serif text-3xl absolute text-[#4A4036]">🌹</span>
+                        <img src="logo.jpg" alt="Rosano Logo"
+                            className="w-full h-full object-cover relative z-10 bg-white" onError={(e)=>
+                        e.target.style.display = 'none'} />
+                    </div>
+                </div>
+                <p className="text-[#EFE8D8]/70 font-light max-w-sm">
+                    Siz ve patili dostunuz için özenle dikilmiş, sevgiyle tasarlanmış butik aksesuarlar.
+                </p>
+            </div>
+
+            <div className="flex flex-col gap-4">
+                <h4 className="font-serif text-lg text-white mb-2">Hızlı Bağlantılar</h4>
+                <a href="https://www.shopier.com/rosanostudio" target="_blank" rel="noreferrer"
+                    className="text-[#EFE8D8]/70 hover:text-white transition-colors w-fit">Shopier Mağazamız</a>
+                <a href="#" className="text-[#EFE8D8]/70 hover:text-white transition-colors w-fit">Etsy Store</a>
+                <a href="#" className="text-[#EFE8D8]/70 hover:text-white transition-colors w-fit">Amazon Handmade
+                    (Yakında)</a>
+                <a href="#sizing" className="text-[#EFE8D8]/70 hover:text-white transition-colors w-fit">Beden
+                    Tablosu</a>
+            </div>
+
+            <div className="flex flex-col gap-4">
+                <h4 className="font-serif text-lg text-white mb-2">İletişim</h4>
+                <p className="text-[#EFE8D8]/70 font-light flex items-center gap-2">
+                    <Mail size={16} /> rosanostudiotr@gmail.com
+                </p>
+                <p className="text-[#EFE8D8]/70 font-light flex items-center gap-2">
+                    <span className="font-bold">WhatsApp:</span> 0532 100 87 83
+                </p>
+                <div className="flex items-center gap-4 mt-2">
+                    <a href="#"
+                        className="w-10 h-10 rounded-full bg-[#EFE8D8]/10 flex items-center justify-center hover:bg-rose-900 transition-colors">
+                        <Instagram size={20} />
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div
+            className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#EFE8D8]/50 font-light">
+            <p>&copy; {new Date().getFullYear()} ROSANO.STUDIO. Tüm hakları saklıdır.</p>
+            <div className="flex items-center gap-6">
+                <a href="#" className="hover:text-white transition-colors">Gizlilik Politikası</a>
+                <a href="#" className="hover:text-white transition-colors">Kullanım Koşulları</a>
+            </div>
+        </div>
+    </footer>
+
+</div>
+);
+}
